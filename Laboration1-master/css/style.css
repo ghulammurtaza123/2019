@@ -1,0 +1,373 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    margin: 0px;
+}
+
+.header {
+    grid-area: header;
+    height: 100%;
+    background-color: #005792;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 15px;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+    text-align: center;
+}
+
+
+/* Header*/
+
+.logo-name {
+    margin: 0px;
+    color: white;
+}
+
+.meny {
+    grid-area: menu;
+    height: 100%;
+    background-color: #448ef6;
+}
+
+.navbar {
+    overflow: hidden;
+    text-align: right;
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+}
+
+.container {
+    grid-area: main;
+}
+
+.main-container {
+    display: flex;
+    justify-content: center;
+    justify-content: space-around;
+    background-color: #000;
+    width: 75%;
+    height: 100%;
+}
+
+.image {
+    flex-direction: row;
+    align-self: center;
+    height: 60%;
+    width: 40%;
+}
+
+.produkt-namn {
+    align-self: center;
+}
+
+.item {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    background-color: white;
+    justify-content: center;
+    width: 300px;
+    height: 300px;
+    border: 2px solid black;
+}
+
+.right-container {
+    background-image: url("../img/sidebar.jpg");
+    display: flex;
+    width: 25%;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.item-aside {
+    width: 100px;
+    margin: 10px;
+    font-size: 15px;
+    color: white;
+    text-align: center;
+}
+
+.aside-pic {
+    width: 100%;
+    text-align: center;
+}
+
+.footer {
+    grid-area: footer;
+    background-color: #00204a;
+    height: 100%;
+}
+
+.copyright {
+    color: white;
+    text-align: center;
+    margin-top: 0px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-areas: 'header header header''menu menu menu' 'main main main' 'footer footer footer';
+    grid-template-rows: 20% 10% 50% 20%;
+    grid-gap: 5px;
+    background-color: lightblue;
+    padding: 5px;
+}
+
+.grid-container>div {
+    padding: 30px 5px;
+    font-size: 25px;
+}
+
+
+/*Media Queries*/
+
+@media screen and (max-width:1014px) {
+    main {
+        flex-direction: column-reverse;
+    }
+    .grid-container {
+        display: grid;
+        grid-template-rows: auto auto auto;
+        grid-template-rows: 15% 10% 60% 15%;
+        grid-gap: 5px;
+        width: auto;
+        height: auto;
+    }
+    .main-container {
+        flex-direction: column-reverse;
+        justify-content: space-around;
+        width: 100%;
+        margin: 0px;
+        height: 75%;
+    }
+    .right-container {
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: nowrap;
+        height: 25%;
+        width: 100%;
+        margin: 0px;
+    }
+    .item {
+        width: 100%;
+        text-align: center;
+        flex-direction: row;
+        font-size: 5vw;
+        height: 32%;
+    }
+    .item-aside {
+        width: 100%;
+        height: auto;
+        font-size: 4vw;
+        align-self: center;
+        padding: 10px;
+    }
+    .navbar {
+        float: left;
+        padding: 10px;
+        font-size: 20px;
+    }
+    .logo-name {
+        float: right;
+    }
+    footer {
+        width: 100%
+    }
+    .produkt-container {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+}
+
+
+/*Kontakt sida*/
+
+.kontakt {
+    position: relative;
+    height: 55%;
+    width: 300px;
+    top: 30px;
+}
+
+.kontakt-namn {
+    float: left;
+    height: 140px;
+    width: 200px;
+}
+
+.kontakt-pic {
+    float: left;
+    height: 140px;
+    width: 150px;
+    border-radius: 100%;
+}
+
+.skills {
+    position: absolute;
+    left: 155px;
+    height: 135px;
+    width: 200px;
+    font-size: 14px;
+    background-color: #dadddf;
+}
+
+.skill-item-1 {
+    position: relative;
+    bottom: 0px;
+    left: 20px;
+    margin-left: 3px;
+}
+
+.skill-item-2 {
+    position: relative;
+    top: 30px;
+    left: 20px;
+    margin-left: 3px;
+}
+
+.kontakt-footer {
+    grid-area: footer;
+    background-color: #00204a;
+    height: 100%;
+    position: relative;
+    bottom: -50px;
+}
+
+
+/*Produkt sida*/
+
+.produkt-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-around;
+    height: 100%;
+    width: 100%;
+}
+
+.produkt-body {
+    background-color: powderblue;
+}
+
+.produkt-namn {
+    color: black;
+}
+
+.main-produktsida {
+    display: flex;
+    flex-direction: row;
+    height: 260px;
+}
+
+.aside-produktsida {
+    position: relative;
+    width: 100px;
+    height: 130px;
+    font-size: 120%;
+    top: 40px;
+}
+
+.laptop-garanti {
+    background-color: powderblue;
+    width: 180px;
+    height: 0px;
+    text-align: center;
+}
+
+.fas {
+    position: absolute;
+    top: 12%;
+    left: 5%;
+}
+
+.table-rubrik {
+    text-align: center;
+    margin-top: 0px;
+}
+
+.table-laptop {
+    border: 1px solid black;
+    background-color: #EEEEEE;
+    text-align: left;
+    border-collapse: collapse;
+    width: 100%;
+    height: 100%;
+}
+
+.table-laptop thead {
+    background: #1C6EA4;
+    border-bottom: 2px solid #444444;
+}
+
+.table-laptop td,
+.table-laptop th {
+    border: 1px solid #aaaaaa;
+    padding: 3px 2px;
+}
+
+.table-laptop tbody td {
+    font-size: 20px;
+}
+
+.table-laptop tr:nth-child(even) {
+    background: #D0E4F5;
+}
+
+.div-table-1 {
+    width: 33%;
+    height: 200px;
+}
+
+.div-table-2 {
+    width: 33%;
+    height: 200px;
+}
+
+.div-table-3 {
+    width: 33%;
+    height: 200px;
+}
+
+.mobile-icon {
+    width: 60px;
+    height: 60px;
+    margin: 0px;
+}
+
+.garanti-box {
+    position: absolute;
+    left: -75px;
+    top: 15px;
+}
+
+.garanti-1 {
+    position: relative;
+    left: 200px;
+    font-size: 20px;
+    color: white;
+}
+
+.garanti-2 {
+    position: relative;
+    left: 200px;
+    top: 50px;
+    font-size: 20px;
+    color: white;
+}
